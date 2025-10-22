@@ -1,103 +1,112 @@
----
+-----
 
-# 📚 Day 1: Foundations of Programming, Algorithms & Databases
+# 🚀 Fundamentals of Programming, Efficiency, and Data Management
 
----
+This repository documents my comprehensive study across three critical domains in Computer Science and Data Science: **Python Programming Fundamentals**, **Computational Complexity (Big O)**, and **SQL/Relational Databases**.
+It serves as a detailed reference for core concepts, syntax rules, and practical application methods.
 
-## 1. Python Fundamentals 🐍
+-----
 
-*We covered the basic building blocks of Python programming, from syntax rules to control flow.*
+## 📚 Module Breakdown
 
-### A. Python Syntax and Structure
+This project is organized around three main modules, covering both theoretical and practical skills.
 
-| **Concept** | **Description** | **Example** |
-| :--- | :--- | :--- |
-| **Keywords** | Reserved words that have fixed meaning (e.g., `def`, `if`, `else`). *Cannot be used as variable names.* | `def`, `if`, `while`, `True` |
-| **Identifiers** | Names you create for variables, functions, etc. Must start with a letter or `_`. Can contain letters, numbers, and `_`. | `user_name`, `data_2024` |
-| **Comments** | Used for documentation; *ignored by the interpreter*. | `# This is a comment` |
-| **Indentation** | **Syntactically significant** (mandatory 4 spaces). Defines a **block of code** (or "suite") following a colon (`:`). | `if x > 5:` ← *indented block follows* |
-| **Statements** | An instruction that the interpreter executes to **perform an action** or cause a side effect. | `x = 5`, `print("Hello")` |
-| **Expressions** | Code that **evaluates to a value** (can be used inside statements). | `5 + 2` (evaluates to `7`), `x > 5` (evaluates to `True`) |
+### Module 1: Python Fundamentals 🐍
 
-### B. Variables and Data Types
+This section covers the absolute essentials of writing functional, readable code in Python.
 
-| **Data Type** | **Description** | **Example** |
-| :--- | :--- | :--- |
-| **Integer (int)** 🔢 | Whole numbers without a decimal point. | `42`, `-10` |
-| **Float (float)** 💧 | Numbers with a decimal point. | `3.14`, `1.0` |
-| **String (str)** 💬 | Textual data, defined by single or double quotes. | `"Hello"`, `'World'` |
-| **Boolean (bool)** ✅ | Represents logical states. *Must be capitalized.* | `True`, `False` |
+| Topic | Description |
+| :--- | :--- |
+| **Syntax & Structure** | Keywords, Identifiers, Comments, and the critical role of **Indentation** and **Statements**. |
+| **Data Types & Variables** | Defining and utilizing basic data types (`int`, `float`, `str`, `bool`) and the rules for naming **Variables**. |
+| **I/O & Operators** | Handling **Standard Input** (`input()`) and **Output** (`print()`), and using arithmetic and logical **Operators** (`+`, `//`, `%`, `and`, `or`). |
+| **Control Flow** | Implementing decision-making logic with **`if/else/elif`** structures and repetition with **`while` loops**. |
 
-### C. Operators and Control Flow
+### Module 2: Computational Complexity (Big O) ⏱️
 
-| **Operator Type** | **Operator** | **Description** | **Example** |
-| :--- | :--- | :--- | :--- |
-| **Exponentiation** | `**` | Raises the left operand to the power of the right. | `5 ** 3` → `125` |
-| **True Division** | `/` | Standard division, always returns a `float`. | `10 / 3` → `3.33...` |
-| **Floor Division** | `//` | Divides and rounds down to the nearest whole number (integer). | `10 // 3` → `3` |
-| **Modulo** | `%` | Returns the **remainder** of the division. | `10 % 3` → `1` |
-| **Logical** | `and` | Returns `True` if **both** conditions are `True`. | `A and B` |
-| **Logical** | `or` | Returns `True` if **at least one** condition is `True`. | `A or B` |
-| **Conditional** | `if/else` | Executes a block of code if the condition is **`True`**; executes the `else` block if it is **`False`**. | `if age > 18:` |
-| **Looping** | `while` | Executes a block of code repeatedly as long as its condition remains **`True`**. | `while count < 5:` |
+This module focuses on algorithm efficiency and performance analysis, independent of hardware.
 
----
+| Concept | Description |
+| :--- | :--- |
+| **Complexity Analysis** | Understanding **scalability** and why runtime matters for large datasets ($\mathbf{N}$). |
+| **Big O Notation** | Measuring the **worst-case** efficiency using standardized notations. |
+| **Key Complexities** | **$O(1)$** (Constant), **$O(\log N)$** (Logarithmic, e.g., Binary Search), **$O(N)$** (Linear), and **$O(N^2)$** (Quadratic, e.g., Nested Loops). |
 
-## 2. Computational Complexity (Big O Notation) ⏱️
+### Module 3: SQL and Databases 🗄️
 
-*Big O notation describes an algorithm's performance (runtime) as the input size (**N**) grows. It is crucial for* ***scalability***.
+This section covers the foundations of relational database management and querying data using SQL.
 
-| **Big O Notation** | **Name** | **Growth Rate vs. N** | **Practical Example** |
-| :--- | :--- | :--- | :--- |
-| **O(1)** | **Constant Time** | No change. | Accessing an element by index (e.g., `list[0]`). |
-| **O(log N)** | **Logarithmic Time** | Very slow growth (cuts N in half each step). | **Binary Search** on a sorted list. |
-| **O(N)** | **Linear Time** | Direct proportion to N. | A single `while` loop iterating over all N items. |
-| **O(N²)** | **Quadratic Time** | Proportional to N-squared (very slow growth). | A **nested loop** (loop inside a loop). |
+| Topic | Description |
+| :--- | :--- |
+| **Database Basics** | Introduction to Databases, why use **SQL**, and the four crucial **ACID** properties (Atomicity, Consistency, Isolation, Durability). |
+| **Basic Querying** | Core statements: **`SELECT`**, **`FROM`**, **`WHERE`**. Using comparison operators (`=`, `<>`) and handling **`NULL`** values (`IS NULL`). |
+| **Aggregation & Grouping** | Summarizing data using **Aggregate Functions** (`COUNT`, `MIN`, `MAX`, `AVG`, `SUM`) and organizing results with **`GROUP BY`** and **`HAVING`**. |
+| **Advanced Filtering & Joins**| Using **Logical Operators** (`AND`, `OR`, `NOT`), **`ORDER BY`**, **`LIMIT`**, and connecting related tables with various **JOIN** types (Inner, Left, Right, Outer). |
 
----
+-----
 
-## 3. SQL and Databases 🗄️
+## ⚙️ Getting Started
 
-*SQL (Structured Query Language) is used to manage and query data in an* ***RDBMS*** *(Relational Database Management System).*
+To run or review the code examples and SQL files related to this study, follow these steps.
 
-### A. ACID Properties
+### Prerequisites
 
-*These four properties guarantee that database transactions are processed reliably, ensuring* ***data integrity***.
+1.  **Python:** Ensure you have **Python 3.x** installed.
+2.  **MySQL:** (For SQL modules) Install a MySQL server or a similar RDBMS (e.g., PostgreSQL, SQLite).
+3.  **IMDB Dataset:** If studying the data loading section, ensure you have the necessary IMDB dataset files (often provided as part of specific courses or downloaded publicly).
 
-- **Atomicity** ⚛️: *All-or-Nothing.* A transaction either completes entirely or is fully undone (rolled back).
-- **Consistency** ⚖️: A transaction moves the database from one valid state to another, enforcing all defined rules and constraints.
-- **Isolation** 🛑: Concurrent transactions are isolated; it must appear as if they run sequentially, preventing conflicts and corrupted data.
-- **Durability** 💪: Once a transaction is committed, the changes are **permanent** and will survive system failures (like a power outage).
+### Installation (Python)
 
-### B. Basic SQL Querying
+No specific libraries are required for the Python fundamentals, but for data science exercises, you may need:
 
-| **Clause** | **Purpose** | **Example** |
-| :--- | :--- | :--- |
-| **`SELECT`** | Specifies the columns to retrieve. `*` means all columns. | `SELECT name, age` |
-| **`FROM`** | Specifies the table(s) to retrieve data from. | `FROM CUSTOMER` |
-| **`WHERE`** | **Filters** the rows based on a specified condition. | `WHERE City = 'London'` |
+```bash
+pip install numpy pandas # If included in your DataScience section
+```
 
-### C. Filtering and Operators
+### Database Setup (SQL)
 
-| **Type** | **Operator/Keyword** | **Description** | **Example** |
-| :--- | :--- | :--- | :--- |
-| **Equality** | `=` | Equal to | `WHERE age = 30` |
-| **Inequality** | `<>` (or `!=`) | Not equal to | `WHERE City <> 'Paris'` |
-| **NULL Check** | `IS NULL` | Checks for missing or unknown data. | `WHERE email IS NULL` |
-| **Logical** | `AND` | Requires **both** conditions to be `TRUE`. | `WHERE age > 18 AND status = 'Active'` |
-| **Logical** | `OR` | Requires **at least one** condition to be `TRUE`. | `WHERE City = 'London' OR City = 'Paris'` |
+The SQL module requires a running database instance:
 
-### D. Aggregate Functions
+1.  Install **MySQL** (or preferred RDBMS).
+2.  Log into your server:
+    ```bash
+    mysql -u [your_user] -p
+    ```
+3.  Execute the necessary scripts to **Load IMDB data** and set up the database structure as outlined in the module.
 
-*These functions operate on a set of rows and return a* ***single summary value***.
+-----
 
-| **Function** | **Purpose** | **Example** |
-| :--- | :--- | :--- |
-| **`COUNT(*)`** | Counts **all rows** (records) retrieved by the query. | `SELECT COUNT(*) FROM CUSTOMER` |
-| **`COUNT(column)`** | Counts only the rows where the specified column has a **non-NULL** value. | `SELECT COUNT(Email) FROM CUSTOMER` |
-| **`MIN()`** | Finds the **minimum** value in a column. | `MIN(Price)` |
-| **`MAX()`** | Finds the **maximum** value in a column. | `MAX(Salary)` |
-| **`AVG()`** | Calculates the **average** of numerical values in a column. | `AVG(Score)` |
-| **`SUM()`** | Calculates the **total sum** of numerical values in a column. | `SUM(Quantity)` |
+## 📂 Repository Structure
 
----
+The project files are typically structured as follows:
+
+```
+.
+├── python_fundamentals/
+│   ├── basics.py         # Keywords, I/O, Operators, If/Else
+│   └── loops.py          # While loop examples
+├── complexity_analysis/
+│   └── big_o_examples.py # O(1), O(N), O(N^2) code examples
+└── sql_scripts/
+    ├── 01_setup.sql      # Database creation, Load IMDB data
+    ├── 02_basic_select.sql # SELECT, WHERE, ORDER BY, LIMIT
+    └── 03_joins_agg.sql  # GROUP BY, HAVING, and various JOINs
+```
+
+-----
+
+## 🤝 Contributing
+
+This is a personal study repository, but suggestions for better structure, clarity, or efficiency improvements on the code examples are always welcome\!
+
+-----
+
+## 📄 License
+
+This project is for educational and personal use.
+
+-----
+
+**Happy Coding and Querying\!**
+
+-----
