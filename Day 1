@@ -1,0 +1,103 @@
+---
+
+# 📚 Day 1: Foundations of Programming, Algorithms & Databases
+
+---
+
+## 1. Python Fundamentals 🐍
+
+*We covered the basic building blocks of Python programming, from syntax rules to control flow.*
+
+### A. Python Syntax and Structure
+
+| **Concept** | **Description** | **Example** |
+| :--- | :--- | :--- |
+| **Keywords** | Reserved words that have fixed meaning (e.g., `def`, `if`, `else`). *Cannot be used as variable names.* | `def`, `if`, `while`, `True` |
+| **Identifiers** | Names you create for variables, functions, etc. Must start with a letter or `_`. Can contain letters, numbers, and `_`. | `user_name`, `data_2024` |
+| **Comments** | Used for documentation; *ignored by the interpreter*. | `# This is a comment` |
+| **Indentation** | **Syntactically significant** (mandatory 4 spaces). Defines a **block of code** (or "suite") following a colon (`:`). | `if x > 5:` ← *indented block follows* |
+| **Statements** | An instruction that the interpreter executes to **perform an action** or cause a side effect. | `x = 5`, `print("Hello")` |
+| **Expressions** | Code that **evaluates to a value** (can be used inside statements). | `5 + 2` (evaluates to `7`), `x > 5` (evaluates to `True`) |
+
+### B. Variables and Data Types
+
+| **Data Type** | **Description** | **Example** |
+| :--- | :--- | :--- |
+| **Integer (int)** 🔢 | Whole numbers without a decimal point. | `42`, `-10` |
+| **Float (float)** 💧 | Numbers with a decimal point. | `3.14`, `1.0` |
+| **String (str)** 💬 | Textual data, defined by single or double quotes. | `"Hello"`, `'World'` |
+| **Boolean (bool)** ✅ | Represents logical states. *Must be capitalized.* | `True`, `False` |
+
+### C. Operators and Control Flow
+
+| **Operator Type** | **Operator** | **Description** | **Example** |
+| :--- | :--- | :--- | :--- |
+| **Exponentiation** | `**` | Raises the left operand to the power of the right. | `5 ** 3` → `125` |
+| **True Division** | `/` | Standard division, always returns a `float`. | `10 / 3` → `3.33...` |
+| **Floor Division** | `//` | Divides and rounds down to the nearest whole number (integer). | `10 // 3` → `3` |
+| **Modulo** | `%` | Returns the **remainder** of the division. | `10 % 3` → `1` |
+| **Logical** | `and` | Returns `True` if **both** conditions are `True`. | `A and B` |
+| **Logical** | `or` | Returns `True` if **at least one** condition is `True`. | `A or B` |
+| **Conditional** | `if/else` | Executes a block of code if the condition is **`True`**; executes the `else` block if it is **`False`**. | `if age > 18:` |
+| **Looping** | `while` | Executes a block of code repeatedly as long as its condition remains **`True`**. | `while count < 5:` |
+
+---
+
+## 2. Computational Complexity (Big O Notation) ⏱️
+
+*Big O notation describes an algorithm's performance (runtime) as the input size (**N**) grows. It is crucial for* ***scalability***.
+
+| **Big O Notation** | **Name** | **Growth Rate vs. N** | **Practical Example** |
+| :--- | :--- | :--- | :--- |
+| **O(1)** | **Constant Time** | No change. | Accessing an element by index (e.g., `list[0]`). |
+| **O(log N)** | **Logarithmic Time** | Very slow growth (cuts N in half each step). | **Binary Search** on a sorted list. |
+| **O(N)** | **Linear Time** | Direct proportion to N. | A single `while` loop iterating over all N items. |
+| **O(N²)** | **Quadratic Time** | Proportional to N-squared (very slow growth). | A **nested loop** (loop inside a loop). |
+
+---
+
+## 3. SQL and Databases 🗄️
+
+*SQL (Structured Query Language) is used to manage and query data in an* ***RDBMS*** *(Relational Database Management System).*
+
+### A. ACID Properties
+
+*These four properties guarantee that database transactions are processed reliably, ensuring* ***data integrity***.
+
+- **Atomicity** ⚛️: *All-or-Nothing.* A transaction either completes entirely or is fully undone (rolled back).
+- **Consistency** ⚖️: A transaction moves the database from one valid state to another, enforcing all defined rules and constraints.
+- **Isolation** 🛑: Concurrent transactions are isolated; it must appear as if they run sequentially, preventing conflicts and corrupted data.
+- **Durability** 💪: Once a transaction is committed, the changes are **permanent** and will survive system failures (like a power outage).
+
+### B. Basic SQL Querying
+
+| **Clause** | **Purpose** | **Example** |
+| :--- | :--- | :--- |
+| **`SELECT`** | Specifies the columns to retrieve. `*` means all columns. | `SELECT name, age` |
+| **`FROM`** | Specifies the table(s) to retrieve data from. | `FROM CUSTOMER` |
+| **`WHERE`** | **Filters** the rows based on a specified condition. | `WHERE City = 'London'` |
+
+### C. Filtering and Operators
+
+| **Type** | **Operator/Keyword** | **Description** | **Example** |
+| :--- | :--- | :--- | :--- |
+| **Equality** | `=` | Equal to | `WHERE age = 30` |
+| **Inequality** | `<>` (or `!=`) | Not equal to | `WHERE City <> 'Paris'` |
+| **NULL Check** | `IS NULL` | Checks for missing or unknown data. | `WHERE email IS NULL` |
+| **Logical** | `AND` | Requires **both** conditions to be `TRUE`. | `WHERE age > 18 AND status = 'Active'` |
+| **Logical** | `OR` | Requires **at least one** condition to be `TRUE`. | `WHERE City = 'London' OR City = 'Paris'` |
+
+### D. Aggregate Functions
+
+*These functions operate on a set of rows and return a* ***single summary value***.
+
+| **Function** | **Purpose** | **Example** |
+| :--- | :--- | :--- |
+| **`COUNT(*)`** | Counts **all rows** (records) retrieved by the query. | `SELECT COUNT(*) FROM CUSTOMER` |
+| **`COUNT(column)`** | Counts only the rows where the specified column has a **non-NULL** value. | `SELECT COUNT(Email) FROM CUSTOMER` |
+| **`MIN()`** | Finds the **minimum** value in a column. | `MIN(Price)` |
+| **`MAX()`** | Finds the **maximum** value in a column. | `MAX(Salary)` |
+| **`AVG()`** | Calculates the **average** of numerical values in a column. | `AVG(Score)` |
+| **`SUM()`** | Calculates the **total sum** of numerical values in a column. | `SUM(Quantity)` |
+
+---
